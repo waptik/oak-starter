@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "@/": "./",
+    "@utils/": "./utils/",
+
+    "oak": "https://deno.land/x/oak@v11.1.0/mod.ts",
+    "validasaur": "https://deno.land/x/validasaur@v0.15.0/mod.ts",
+    "colors": "https://deno.land/std@0.153.0/fmt/colors.ts",
+    "fmt": "https://deno.land/std@0.153.0/fmt/mod.ts",
+    "fmt/": "https://deno.land/std@0.153.0/fmt/"
+  }
+}
