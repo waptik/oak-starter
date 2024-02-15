@@ -1,6 +1,12 @@
 {
   "tasks": {
-    "start": "deno run -A  --unstable --allow-read --allow-write --allow-net --allow-env --allow-run --allow-hrtime --watch=static/,routes/ dev.ts"
+    "start": "deno run -A  --unstable --watch=static/,routes/ dev.ts"
   },
-  "importMap": "./import_map.json"
+  "imports": {
+    "@utils/": "./utils/",
+    "@types": "./types.ts",
+    "$std/": "https://deno.land/std@0.211.0/",
+    "oak": "https://deno.land/x/oak@v13.2.5/mod.ts",
+    "validasaur": "https://deno.land/x/validasaur@v0.15.0/mod.ts"
+  }
 }

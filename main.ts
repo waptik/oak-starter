@@ -5,13 +5,13 @@
 /// <reference lib="deno.unstable" />
 
 import { Application, etag } from "oak";
-import { bold, yellow } from "colors";
+import { bold, yellow } from "$std/fmt/colors.ts";
 import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 
-import { router } from "@/routes/mod.ts";
-import * as middlewares from "@/middlewares/mod.ts";
+import { router } from "./routes/mod.ts";
+import * as middlewares from "./middlewares/mod.ts";
 
-import { Context } from "@/types.ts";
+import { Context } from "./types.ts";
 
 const port = 8080;
 

@@ -1,6 +1,6 @@
 import { Middleware } from "oak";
 
-import { Context } from "@/types.ts";
+import { Context } from "@types";
 
 /**
  * requestId middleware

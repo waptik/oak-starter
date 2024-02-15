@@ -1,6 +1,6 @@
 import { Middleware, Status } from "oak";
 
-import { Context } from "@/types.ts";
+import { Context } from "@types";
 
 function notFound404Middleware(): Middleware {
   return function loggerMiddleware(ctx: Context) {

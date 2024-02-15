@@ -1,6 +1,6 @@
 import { Router } from "oak";
 
-import { Context } from "@/types.ts";
+import { Context } from "@types";
 
 const router: Router<Context> = new Router<Context>();
 

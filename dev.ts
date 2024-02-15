@@ -1,14 +1,14 @@
 #!/usr/bin/env -S deno run -A --watch=static/,routes/
 
-import { error } from "./utils/error.ts";
+import { error } from "@utils/error.ts";
 
-import { gte } from "./deps.ts";
+import { gte, semverParse } from "./deps.ts";
 
-const MIN_DENO_VERSION = "1.25.0";
+const MIN_DENO_VERSION = "1.31.0";
 
 export function ensureMinDenoVersion() {
   // Check that the minimum supported Deno version is being used.
-  if (!gte(Deno.version.deno, MIN_DENO_VERSION)) {
+  if (!gte(semverParse(Deno.version.deno), semverParse(MIN_DENO_VERSION))) {
     let message =
       `Deno version ${MIN_DENO_VERSION} or higher is required. Please update Deno.\n\n`;
 
