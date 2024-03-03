@@ -1,7 +1,6 @@
-import { Middleware } from "oak";
+import { Context, Middleware } from "@oak/oak";
 
-import { Context } from "@types";
-import { blue, bold, cyan, green, yellow } from "$std/fmt/colors.ts";
+import { blue, bold, cyan, green, yellow } from "@std/fmt/colors.ts";
 
 function loggerMiddleware(): Middleware {
   return async function loggerMiddleware(ctx: Context, next) {

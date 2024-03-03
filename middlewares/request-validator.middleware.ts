@@ -1,7 +1,5 @@
 import { validate, ValidationErrors, ValidationRules } from "validasaur";
-import { httpErrors, Middleware } from "oak";
-
-import { Context } from "./../types.ts";
+import { Context, httpErrors, Middleware } from "@oak/oak";
 
 /**
  * get single error message from errors
@@ -27,8 +25,7 @@ const requestValidator = (
   return async (ctx: Context, next) => {
     /** get request body */
     const request = ctx.request;
-    const result = request.body({ type: "json" });
-    const body = await result.value;
+    const body = await request.body.json();
 
     if (!body) {
       throw new httpErrors.BadRequest("Request body cannot be empty");

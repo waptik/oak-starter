@@ -1,6 +1,4 @@
-import { Middleware } from "oak";
-
-import { Context } from "@types";
+import { Context, Middleware } from "@oak/oak";
 
 /**
  * requestId middleware

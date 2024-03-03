@@ -6,7 +6,11 @@ export {
   join,
   resolve,
   toFileUrl,
-} from "$std/path/mod.ts";
-export { walk } from "$std/fs/walk.ts";
-export { parse } from "$std/flags/mod.ts";
-export { gte, lt, lte, parse as semverParse } from "$std/semver/mod.ts";
+} from "@std/path/mod.ts";
+export { parse } from "@std/flags/mod.ts";
+export {
+  greaterOrEqual,
+  lessOrEqual,
+  lessThan,
+  parse as semverParse,
+} from "@std/semver/mod.ts";

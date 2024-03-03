@@ -1,12 +1,12 @@
 {
   "tasks": {
-    "start": "deno run -A  --unstable --watch=static/,routes/ dev.ts"
+    "start": "deno run -A  --unstable-kv --watch=static/,routes/ dev.ts"
   },
   "imports": {
-    "@utils/": "./utils/",
+    "@std/": "https://deno.land/std@0.218.2/",
+    "@oak/oak": "jsr:@oak/oak@^14.1.1",
     "@types": "./types.ts",
-    "$std/": "https://deno.land/std@0.211.0/",
-    "oak": "https://deno.land/x/oak@v13.2.5/mod.ts",
+    "@utils/": "./utils/",
     "validasaur": "https://deno.land/x/validasaur@v0.15.0/mod.ts"
   }
 }

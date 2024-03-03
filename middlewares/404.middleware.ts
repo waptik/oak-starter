@@ -1,6 +1,4 @@
-import { Middleware, Status } from "oak";
-
-import { Context } from "@types";
+import { Context, Middleware, Status } from "@oak/oak";
 
 function notFound404Middleware(): Middleware {
   return function loggerMiddleware(ctx: Context) {

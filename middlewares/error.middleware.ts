@@ -1,6 +1,5 @@
-import { isHttpError, Middleware, Status } from "oak";
+import { Context, isHttpError, Middleware, Status } from "@oak/oak";
 
-import { Context } from "@types";
 import { isDev } from "@utils/constants.ts";
 
 const errorMiddleware = (): Middleware => async (ctx: Context, next) => {

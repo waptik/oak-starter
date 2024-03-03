@@ -2,13 +2,18 @@
 
 import { error } from "@utils/error.ts";
 
-import { gte, semverParse } from "./deps.ts";
+import { greaterOrEqual, semverParse } from "./deps.ts";
 
-const MIN_DENO_VERSION = "1.31.0";
+const MIN_DENO_VERSION = "1.41.0";
 
 export function ensureMinDenoVersion() {
   // Check that the minimum supported Deno version is being used.
-  if (!gte(semverParse(Deno.version.deno), semverParse(MIN_DENO_VERSION))) {
+  if (
+    !greaterOrEqual(
+      semverParse(Deno.version.deno),
+      semverParse(MIN_DENO_VERSION),
+    )
+  ) {
     let message =
       `Deno version ${MIN_DENO_VERSION} or higher is required. Please update Deno.\n\n`;
 

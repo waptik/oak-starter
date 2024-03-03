@@ -1,6 +1,4 @@
-import { Middleware } from "oak";
-
-import { Context } from "@types";
+import { Context, Middleware } from "@oak/oak";
 
 const timingMiddleware = (): Middleware => async (ctx: Context, next) => {
   const start = Date.now();

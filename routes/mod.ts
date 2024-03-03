@@ -1,11 +1,9 @@
-import { Router } from "oak";
+import { Router } from "@oak/oak";
 
-import { Context } from "@types";
+import mainRouter from "./main.router.ts";
 
-const router: Router<Context> = new Router<Context>();
+const router: Router = new Router();
 
-router.get("/", (ctx) => {
-  ctx.response.body = "hello world";
-});
+router.use(mainRouter.routes());
 
 export { router };
